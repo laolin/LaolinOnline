@@ -1,20 +1,60 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>First page of app</title>
+<title>PinYin</title>
 <script src="jquery-1.8.0.min.js"></script>
 <script src="laolin.main.js"></script>
 <script src="underscore-min.js"></script>
+<style>
+#hd span {
+  font-size:2em;
+}
+#hd {
+  font-size:1em;
+  color:#633;
+}
+.alert {
+}
+#info-box-main {
+
+  font-size:1.2em;
+}
+input {
+  height:50px;
+  width:80px;
+  font-size:1.3em;
+  padding: 10px;
+  margin:0px;
+}
+.btn {
+  background-color: green;
+  border-color: green;
+  color:red; 
+}
+.note {
+  color:red;
+  font-weight:800;
+}
+</style>
 </head>
 <body>
 <div class=" ">
   <div>
-      <h3>Title </h3>
+      <a id='hd'><span>查拼音</span></a>
       <input type="text" name="q" id="py_q" value="中" />
       <input type="button" class="btn" value="查询" onclick="get_py('py_q','info-box-main')" />
       </form>
-      <div class='alert'>Result: <span id="info-box-main" class='' style="font-size:2em"> </span></div>
+      <div class='alert'><span id="info-box-main"  style=""> </span></div>
    <div>
+   <div>
+   <h3>汉字/拼音互查</h3>
+   <ul>
+   <li>功能1：输入完整的拼音（不含音调），查出全部同音字。</li>
+   <li>功能2：输入一个汉字，查出全部读音（含音调，<span class='note'>5代表轻声</span>）。</li>
+   <li>（注，是通过在线连到网站api.laolin.com去查的，所以每查一次都要要耗一点点流量。）</li>
+   </ul>
+   </div>
+   &copy; LaoLin(<a href='http://laolin.com'>http://laolin.com</a>) <a href='http://weibo.com/n/laolincom'>@LaolinCom</a>
 </div>
 <script>
   laolin.fn.init();
