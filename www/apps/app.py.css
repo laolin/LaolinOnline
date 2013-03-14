@@ -1,9 +1,10 @@
-.py-input  , #py_q
+#py_btn  , #py_q
 {
   height:50px;
   width:100px;
-  font-size:2em;
+  font-size:1.6em;
   margin:0px;
+  padding:0px;
 }
 .note {
   color:red;
