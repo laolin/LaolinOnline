@@ -28,7 +28,7 @@ laolin.fn={};
   
   /// ajax调用一个url（这个URL返回js）并执行之，用于跨域ajax
   /// 参考baidu自己各站点跨域ajax的方法的
-  laolin.fn.getjs=function (id,url){
+  laolin.fn.loadJs=function (id,url){
      oScript = document.getElementById(id);
      var head = document.getElementsByTagName("head").item(0);
      if (oScript) {

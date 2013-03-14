@@ -17,7 +17,7 @@ $(function(){
     url="http://api.laolin.com/rest/api/pinyin/list/"+
     'js=1&func=set_info_box_main'+
     '&q='+$('#'+id_q).attr('value');
-    laolin.fn.getjs('pyscript',url);
+    laolin.fn.loadJs('pyscript',url);
     return false;
   }
   
