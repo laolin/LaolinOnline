@@ -25,7 +25,7 @@ Lin-App
 - 它动态加载apps/app.py.html作为main_box的内容。
 - 设置好参数tdata，并调用set_top_nav，显示合适的导航条
 - 显示了一个查询表单，对应的动作是函数get_py
-- get_py函数调用 laolin.fn.getjs 动态加载一个跨域的js文件
+- get_py函数调用 laolin.fn.loadJs 动态加载一个跨域的js文件
 - 这个js文件会根据我们的参数执行合适的代码实现显示查询结果
 
 # Authors

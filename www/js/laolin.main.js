@@ -26,7 +26,7 @@ laolin.fn={};
   };
   
   
-  /// ajax调用一个url（这个URL返回js）并执行之，用于跨域ajax
+  /// 调用一个url（这个URL返回js）并执行之，用于跨域ajax
   /// 参考baidu自己各站点跨域ajax的方法的
   laolin.fn.loadJs=function (id,url){
      oScript = document.getElementById(id);
@@ -42,7 +42,22 @@ laolin.fn={};
      head.appendChild(oScript);
      return oScript;
   }
-
+  
+  /// 动态加载一个css
+  laolin.fn.loadCss=function (id,url){
+    var cssTag = document.getElementById(id);
+    var head = document.getElementsByTagName('head').item(0);
+    if(cssTag) { 
+      head.removeChild(cssTag);
+    }
+    css = document.createElement('link');
+    css.setAttribute('href' ,url);
+    css.setAttribute('rel' , 'stylesheet');
+    css.setAttribute('type' , 'text/css');
+    css.id = id;
+    head.appendChild(css);
+    return css;
+  }
   /// 取得URL中的?后的参数
   /// 参考http://stackoverflow.com/questions/901115/how-can-i-get-query-string-values
   laolin.fn.getParameterByName=function (name)

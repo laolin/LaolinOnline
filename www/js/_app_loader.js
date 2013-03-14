@@ -5,6 +5,7 @@ $(function(){
   }
   _load_app(app);
 });
-function _load_app(a) {
-  laolin.fn.getjs('app-1','apps/app.'+a+'.js');
+function _load_app(a,id) {
+  if(typeof(id)=='undefined')id='app-1';
+  laolin.fn.loadJs(id,'apps/app.'+a+'.js');
 }

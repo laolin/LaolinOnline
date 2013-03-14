@@ -1,0 +1,14 @@
+.py-input  , #py_q
+{
+  height:50px;
+  width:100px;
+  font-size:2em;
+  margin:0px;
+}
+.note {
+  color:red;
+  font-weight:800;
+}
+#info-box-main {
+  font-size:2em;
+}

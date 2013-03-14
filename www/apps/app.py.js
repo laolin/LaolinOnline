@@ -9,6 +9,7 @@ $(function(){
   
   $.get('apps/app.py.html',function(htm){
     set_main_box(htm);
+    laolin.fn.loadCss('py_css','apps/app.py.css');
   });
   document.title='查拼音';
 });
