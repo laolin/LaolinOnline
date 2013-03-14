@@ -18,7 +18,7 @@ $(function(){
     url="http://api.laolin.com/rest/api/pinyin/list/"+
     'js=1&func=set_info_box_main'+
     '&q='+$('#'+id_q).attr('value');
-    py_waiting(6);
+    py_waiting(0);
     laolin.fn.loadJs('pyscript',url);//会调用 set_info_box_main(htm)
     return false;
   }
@@ -30,12 +30,17 @@ $(function(){
   }
   
   function py_waiting(n) {
-    if(n<=1) {
+    MAX_WAIT=8;
+    n++;
+    if(n>=MAX_WAIT) {
       set_info_box_main('[error]网络超时。');
       return;
     }
-    n--;
-    $("#py_btn").attr('value','查询中('+n+')').attr('disabled',true);
+    txt='查询中';
+    if(n>2) {//3秒以后再数秒，这样正常网速下就不会出现数秒这破事了
+      txt+="("+(MAX_WAIT-n)+")";
+    }
+    $("#py_btn").attr('value',txt).attr('disabled',true);
     laolin.data.py_timeid=setTimeout("py_waiting("+n+")",1000);
 
   }
