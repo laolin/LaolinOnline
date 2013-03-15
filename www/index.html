@@ -43,27 +43,16 @@
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner" id="opt-navbar-inner">
-      
-        
       </div>
     </div>
 
     <div class="container-fluid">
       <div class="row-fluid" id="opt-main-box">
-      
-      
-      
-        
-        
-        
       </div><!--/row-->
-
       <hr>
-
       <footer>
         <p>&copy; <a href='http://laolin.com'>LaoLin</a> 2013</p>
       </footer>
-
     </div><!--/.fluid-container-->
 
     <!-- Le javascript
@@ -88,7 +77,7 @@
             <span class="icon-bar"></span>
           </button>
           
-          <a class="brand" href="#"><%= sitename %></a>
+          <a class="brand" href="."><%= sitename %></a>
           <div class="nav-collapse collapse">
             <% if( typeof(loginfo)!='undefined' ){ %>
             <p class="navbar-text pull-right">
@@ -111,5 +100,18 @@
     </script> 
     
     <script src='js/_app_loader.js'>     </script> 
+    <script>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-922595-7']);
+      _gaq.push(['_setDomainName', 'laolin.com']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
   </body>
 </html>
