@@ -5,7 +5,7 @@ $(function(){
   //===========================================
   app={};
   app.name='index';
-  app.disc='欢迎页';
+  app.disc='首页';
   //app.loginfo="请先<a href='#login'>登录</a>";
   app.path='apps/index/';
   app.items={'':{disc:app.disc,html:'index.html',css:'',js:''},
