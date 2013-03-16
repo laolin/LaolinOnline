@@ -1,10 +1,12 @@
 var laolin={};
-laolin.fn={};
+$(function(){
+  laolin.fn={};
 
-/// laolin.fn
-/// =========
+  /// laolin.fn
+  /// =========
   laolin.fn.init=function() {
-      console.log(0);
+    laolin.data={};//放一些变量的地方
+    console.log('laolin.fn.init');
     return true;
   };
   
@@ -71,9 +73,9 @@ laolin.fn={};
     else
       return decodeURIComponent(results[1].replace(/\+/g, " "));
   }
-/// ========
   
-$(function(){
-  laolin.data={};//放一些变量的地方
+  
+  /// ========
+  laolin.fn.init();
   
 });

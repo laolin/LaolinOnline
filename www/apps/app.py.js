@@ -3,7 +3,7 @@ var app_py={};
 $(function(){
   var tdata={};
   tdata['sitename']='查拼音';
-  tdata['nav_items']={'#home':'Home','#about':'About','#contact':'意见反馈'};
+  tdata['nav_items']={'#pinyin':'首页','#pinyin/about':'说明','#pinyin/contact':'意见反馈'};
   tdata['loginfo']="请先<a href='#login'>登录</a>";
   set_top_nav(tdata);
   
@@ -12,8 +12,33 @@ $(function(){
     laolin.fn.loadCss('py_css','apps/app.py.css');
   });
   document.title='查拼音';
+  laolin.router.add('pinyin',pinyin_link_callback);
+  laolin.router.start();
 });
-      
+
+  function pinyin_link_callback(item) {
+    if(typeof(item)=='undefined')item='';
+    console.log('call: '+item);
+    switch(item) {
+      case 'about':
+        $.get('apps/app.py.about.html',function(htm){
+          set_main_box(htm);
+          //laolin.fn.loadCss('py_css','apps/app.py.css');
+        });
+        break;
+      case 'contact':
+        $.get('apps/app.py.contact.html',function(htm){
+          set_main_box(htm);
+          //laolin.fn.loadCss('py_css','apps/app.py.css');
+        });
+        break;
+      default:
+        $.get('apps/app.py.html',function(htm){
+          set_main_box(htm);
+          laolin.fn.loadCss('py_css','apps/app.py.css');
+        });
+    }
+  }
   function get_py(id_q) {
     url="http://api.laolin.com/rest/api/pinyin/list/"+
     'js=1&func=set_info_box_main'+
