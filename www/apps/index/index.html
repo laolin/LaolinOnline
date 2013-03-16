@@ -10,7 +10,7 @@ $(function(){
   var a=laolin.router.allApps;
   for(p in a) {
     if(p=='index')continue;
-    $('<li><a href="#'+p+'">'+a[p]['disc']+'</a></li>').appendTo($('#func-list'));
+    $('<li><a href="#'+p+'/">'+a[p]['disc']+'</a></li>').appendTo($('#func-list'));
   }
 });
 </script>

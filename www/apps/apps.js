@@ -21,7 +21,7 @@ $(function(){
   app={};
   app.name='pinyin';
   app.disc='查拼音';
-  app.loginfo="请先<a href='#login'>登录</a>";
+  //app.loginfo="请先<a href='#login'>登录</a>";
   app.path='apps/pinyin/';
   app.items={'':{disc:app.disc,html:'index.html',css:'',js:'index.js'},
       'about':{disc:'说明',html:'about.html',css:'',js:''}
@@ -86,6 +86,10 @@ function regApp(app) {
       if(iObj.css)laolin.fn.loadCss('app_item_css_'+app.name+item,app.path+iObj.css);
       if(iObj.js)laolin.fn.loadJs('app_item_css_'+app.name+item,app.path+iObj.js);
       document.title=iObj.disc+'-'+app.disc;
+      //hilight nav Item: 
+      var hash=window.location.hash;
+      $('.navbar .nav a').parent().removeClass('active');//全变灰
+      $('.navbar .nav a[href="'+hash+'"]').parent().addClass('active');//与当前URL相符的亮显
     });
   });
   
