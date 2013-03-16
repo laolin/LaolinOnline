@@ -1,12 +1,12 @@
 $(function(){
   app=laolin.fn.getParameterByName('app');
   if( app.length ==0) {
-    app='py';//默认
+    app='pinyin';//默认
   }
   _load_app(app);
 });
 function _load_app(a,id) {
-  if(typeof(id)=='undefined')id='app-1';
+  if(typeof(id)=='undefined')id='app_js_'+a;
   laolin.fn.loadJs(id,'apps/app.'+a+'.js');
 }
 

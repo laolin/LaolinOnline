@@ -1,21 +1,4 @@
 
-$(function(){
-  var app={};
-  
-  app.name='pinyin';
-  app.disc='查拼音';
-  app.loginfo="请先<a href='#login'>登录</a>";
-  app.path='apps/';
-  app.items={'':{disc:'首页',html:'app.py.index.html',css:'',js:''},
-      'about':{disc:'说明',html:'app.py.about.html',css:'',js:''},
-      'contact':{disc:'意见反馈',html:'app.py.contact.html',css:'',js:''}
-      };
-  app.css='app.py.css';
-  app.js='';
-      
-  initApp(app);
-});
-
 
   function get_py(id_q) {
     url="http://api.laolin.com/rest/api/pinyin/list/"+
