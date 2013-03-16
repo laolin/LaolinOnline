@@ -12,8 +12,6 @@ $(function(){
   
   /// 利用underscore的template功能，把data数据套用模板tpl，并放在 to 中
   laolin.fn.template=function(to,tpl,data) {
-      console.log(2);
-
     $(to).html( _.template($(tpl).html(),data));
   };
   
