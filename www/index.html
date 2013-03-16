@@ -73,13 +73,12 @@
             <span class="icon-bar"></span>
           </button>
           
-          <a class="brand" href="."><%= sitename %></a>
+          <a class="brand" href="#index/"><%= sitename %></a>
           <div class="nav-collapse collapse">
-            <% if( typeof(loginfo)!='undefined' ){ %>
             <p class="navbar-text pull-right">
-              <%= loginfo %>
+              <%= appname %> 
+              <% if(loginfo)print( ' | ' + loginfo) %>
             </p>
-            <% } %>
             <ul class="nav">
               <%  _.each(nav_items,function(item,key) { %>
               <li><a href='<%= key %>'><%= item %></a></li>
@@ -95,7 +94,7 @@
      
     </script> 
     
-    <script src='js/_app_loader.js'>     </script> 
+    <script src='apps/apps.js'>     </script> 
     <script>
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-922595-7']);

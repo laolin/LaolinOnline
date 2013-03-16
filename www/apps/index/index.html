@@ -1,0 +1,16 @@
+<div id="index-box">
+功能模块:
+<ul id='func-list'>
+</ul>
+
+</div>
+<script>
+console.log('js in index');
+$(function(){
+  var a=laolin.router.allApps;
+  for(p in a) {
+    if(p=='index')continue;
+    $('<li><a href="#'+p+'">'+a[p]['disc']+'</a></li>').appendTo($('#func-list'));
+  }
+});
+</script>
