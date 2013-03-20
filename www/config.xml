@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.laolin.pinyin"
-        version   = "1.10.0">
-    <name>查拼音</name>
+        id        = "com.laolin.app.online-app-index"
+        version   = "1.1.1">
+    <name>online-app-index</name>
 
     <description>
-        汉字/拼音互查。功能1：输入一个汉字，查出全部读音（含音调）。功能2：输入完整的拼音（不含音调），查出全部同音字。（注，是通过在线连到网站api.laolin.com去查的，所以每查一次都要要耗一点点流量。）
+        It's online-app-index 
     </description>
 
     <author href="http://laolin.com" email="hi@laolin.com">
-        老林(Laolin.com)
+        Laolin(@LaolinCom)(http://Laolin.com)
     </author>
 
     <feature name="http://api.phonegap.com/1.0/device" />

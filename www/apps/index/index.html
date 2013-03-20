@@ -1,5 +1,6 @@
 <div id="index-box">
-  <div id='func-list'>功能模块:
+  <div>功能模块:  
+    <div class="btn-group" id='func-list'></div>
   </div>
   <div>欢迎使用本App，<a href='#index/about-laolin'>本App由LaoLin制作</a>，<a href='#/index/contact'>敬请提出宝贵意见</a>，谢谢。
   </div>  
@@ -10,7 +11,7 @@ $(function(){
   var a=laolin.router.allApps;
   for(p in a) {
     if(p=='index')continue;
-    $('<a href="#'+p+'/" class="btn-primary btn">'+a[p]['disc']+'</a>').appendTo($('#func-list'));
+    $('<button class="btn btn-large" onclick="location=\'#'+p+'/\'" >'+a[p]['disc']+'</button> ').appendTo($('#func-list'));
   }
 });
 </script>

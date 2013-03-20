@@ -1,0 +1,17 @@
+<div id="index-box">
+  跳转到:  
+  <div class="input-append">
+    <input id='addr' value='http://' />  
+    <button class='btn btn-primary' onclick='go()'>Goto:</button>
+  </div>
+</div>
+<script>
+function go() {
+  a=$('#addr').attr('value');
+  console.log(a);
+  window.location=a;
+}
+$(function(){
+
+});
+</script>

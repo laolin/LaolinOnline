@@ -13,7 +13,7 @@ $(function(){
       'about-laolin':{disc:'关于作者',html:'about-laolin.html',css:'',js:''},
       'contact':{disc:'意见反馈',html:'contact.html',css:'',js:''}
       };
-  app.css='app.index.css';
+  app.css='_app.css';
   app.js='';
     
   regApp(app);
@@ -26,7 +26,31 @@ $(function(){
   app.items={'':{disc:app.disc,html:'index.html',css:'',js:'index.js'},
       'about':{disc:'说明',html:'about.html',css:'',js:''}
       };
-  app.css='app.pinyin.css';
+  app.css='_app.css';
+  app.js='';
+  regApp(app);
+  //===========================================
+  app={};
+  app.name='pgtest';
+  app.disc='测试pg功能';
+  //app.loginfo="请先<a href='#login'>登录</a>";
+  app.path='apps/pgtest/';
+  app.items={'':{disc:app.disc,html:'index.html',css:'',js:'index.js'}
+        , 'camera':{disc:'相机',html:'camera.html',css:'',js:''}
+        , 'accelerometer':{disc:'重力感应',html:'accelerometer.html',css:'',js:''}
+      };
+  app.css='_app.css';
+  app.js='';
+  regApp(app);
+  //===========================================
+  app={};
+  app.name='goto';
+  app.disc='跳转到..';
+  //app.loginfo="请先<a href='#login'>登录</a>";
+  app.path='apps/goto/';
+  app.items={'':{disc:app.disc,html:'index.html',css:'',js:''}
+      };
+  app.css='_app.css';
   app.js='';
   regApp(app);
   //===========================================
@@ -34,7 +58,7 @@ $(function(){
   
   
   //MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-  appdef='pinyin';//默认app
+  appdef='pgtest';//默认app
   console.log('router start.');
   laolin.router.start();
   
