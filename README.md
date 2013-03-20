@@ -1,4 +1,4 @@
-Lin-App
+Laolin Online
 =================
 
 
@@ -13,20 +13,19 @@ Lin-App
   - jQuery
   - underscore
   - backbone
-* 同时加载了laolin.main.js, 包含了自定义的一些常用辅助函数
 * 定义了函数 set_top_nav(tdata) 用来动态显示 页头导航条(top_av)
 * 定义了函数 set_main_box(htm) 用来动态显示 页面主要内容(main_box)
-* 加载了 js/_app_loader.js, 它会根据?app=xxx自动调用 apps/app.xxx.js文件
-* apps/app.xxx.js 文件里可调用set_top_nav和set_main_box等函数来动态显示合适的内容
-* 默认app是'py',即加载apps/app.py.js
+* 同时加载了laolin.main.js, 包含了自定义的一些常用辅助函数
+* 加载了laolin.router.js，它利用backbone，定义了laolin.router来实现router功能
+* 加载了 apps/apps.js，它的功能见下一节。
 
-## apps/app.py.js
-
-- 它动态加载apps/app.py.html作为main_box的内容。
-- 设置好参数tdata，并调用set_top_nav，显示合适的导航条
-- 显示了一个查询表单，对应的动作是函数get_py
-- get_py函数调用 laolin.fn.loadJs 动态加载一个跨域的js文件
-- 这个js文件会根据我们的参数执行合适的代码实现显示查询结果
+## apps/apps.js
+- 它定义并登记了所有的app（laolin.router.allApps）、和各app的所有item
+- 通过laolin.router设定router，并和各app和各item对应的页面html，css,js文件关联起来
+- 由router决定当前的app。函数activeApp并根据app的设定，调用set_top_nav，显示合适的顶部导航条
+- 由router决定当前的app的当前item,最终通过set_main_box()来加载html，
+- 根据app的设定通过函数laolin.fn.loadCss()加载需要的css
+- 根据app的设定通过函数laolin.fn.loadJs()加载需要的js
 
 # Authors
 -------

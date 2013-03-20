@@ -58,7 +58,7 @@ $(function(){
   
   
   //MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-  appdef='pgtest';//默认app
+  appdef='index';//默认app
   console.log('router start.');
   laolin.router.start();
   
