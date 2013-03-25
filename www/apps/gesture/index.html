@@ -1,0 +1,27 @@
+<div id="index-box"  >
+  <h1>tesda af a t</h1>
+  <div style="border:3px solid green;height:100px"></div>
+  <h1>tesda af a t</h1>
+  <ul>
+  <li>abcsf afd 
+  <li>123 af 
+  <li>klafiasfdk
+  </ul> 
+  <h1>tesda af a t</h1>
+  <button class='btn ' onclick='go()'>Test:</button> 
+  <div id='info-box'></div>
+</div>
+<script>
+        
+$(function(){ 
+ var element = document.getElementById('index-box');
+ var hammertime = Hammer(element ,{
+        drag: false,
+        transform: false
+    });
+  hammertime.on("tap", function(event) { 
+        console.log(this, event);
+        alert('hello!');
+    });
+});
+</script>

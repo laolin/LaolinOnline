@@ -48,6 +48,18 @@ $(function(){
   regApp(app);
   //===========================================
   app={};
+  app.name='gesture ';
+  app.path='apps/gesture/';
+  app.disc='手势';
+  //app.icon='_app.png';
+  app.bg='#d99';
+  app.css='_app.css';
+  app.js='';
+  app.items={'':{disc:app.disc,html:'index.html',css:'',js:''}
+      };
+  regApp(app);
+  //===========================================
+  app={};
   app.name='goto';
   app.path='apps/goto/';
   app.disc='跳转到..';
