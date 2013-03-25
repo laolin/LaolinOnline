@@ -9,6 +9,7 @@
 
     <!-- Le styles -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/laolin.s_boxes.css" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 60px;
@@ -58,6 +59,7 @@
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/laolin.main.js"></script>
     <script src="./js/laolin.router.js"></script>
+    <script src="./js/laolin.s_boxes.js"></script>
      <script>
       function set_top_nav(tdata) {
         laolin.fn.template("#opt-navbar-inner","#tpl-opt-navbar-inner",tdata);
@@ -74,7 +76,7 @@
             <span class="icon-bar"></span>
           </button>
           
-          <a class="brand" href="#index/"><%= sitename %></a>
+          <a class="brand"href="<%= sitelink %>"><%= sitename %></a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
               <%= appname %> 
@@ -82,7 +84,7 @@
             </p>
             <ul class="nav">
               <%  _.each(nav_items,function(item,key) { %>
-              <li><a href='<%= key %>'><%= item %></a></li>
+              <li><a href='<%= key %>' class=""><%= item %></a></li>
               <% }) ; %>
             </ul>
           </div>     

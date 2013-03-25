@@ -1,14 +1,25 @@
-<div id="index-box">
+<div id="index-box"  class='span9'>
   跳转到:  
   <div class="input-append">
-    <input id='addr' value='http://' />  
-    <button class='btn btn-primary' onclick='go()'>Goto:</button>
+    <input id='addr' class='span9' value='http://' />  
+    <button class='btn ' onclick='go()'>Goto:</button>
+    <div id='info-box'></div>
   </div>
 </div>
 <script>
+
+        
 function go() {
+
+        
   a=$('#addr').attr('value');
   console.log(a);
+  /* Todo: 出错处理
+  index_timeid=setTimeout(function(){
+    document.getElementById('info-box').
+      innerHTML=("<div class='box box-error'>Loading Error</div>");
+  },9000);
+        */
   window.location=a;
 }
 $(function(){

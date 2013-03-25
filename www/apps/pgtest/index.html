@@ -1,32 +1,31 @@
-<div class="app-main-box">
-  <div>
-     所有功能列表（ 或点击上方的导航菜单 ）
-     <div class="btn-group" id='func-list'>
-     </div>
-
- 
-      <div class='alert'><span id="info-main-box"  style=""> </span></div>
-  </div>
-  <div>
-     <h3></h3>
-     <ul>
-     <li>。</li>
-     <li>。</li>
-     </ul>
-  </div>
+<div class="app-main-box"  id='func-list'>
+</div>
+<div>
+   <h3></h3>
+   <ul>
+   <li></li>
+   </ul>
 </div>
 <script>
 
 $(function(){
-  var name=laolin.router.activeApp;
-  var a=laolin.router.allApps[name]['items'];
+  var name=laolin.router.appConfig.activeApp;
+  var a=laolin.router.appConfig.allApps[name]['items'];
+  var b=laolin.router.appConfig.allApps;
+  
+  var items=[];
   for(p in a) {
     if(p=='')continue;
-    $('<button class="btn btn-large" onclick="pg_test_go(\''+p+'\')">'+a[p].disc+'</button>').appendTo($('#func-list'));
+    items.push({
+      'href':'#'+name+'/'+p,
+      'img': b[name]['path']+b[name]['icon'],
+      bg: b[name]['bg'],
+      h3:a[p]['disc'],
+      p:'点击进入' 
+    });
   }
+  laolin.s_boxes.show_boxes('#func-list',items,100);
+  
 });
-function pg_test_go(d) {
-  var name=laolin.router.activeApp;
-  location='#'+name+'/'+d;
-}
+
 </script>
