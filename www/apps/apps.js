@@ -4,8 +4,8 @@ $(function(){
   laolin.router.appConfig={};
   //===========================================
   app={};
-  app.name='index';
-  app.path='apps/index/';
+  app.name='!index';
+  app.path='apps/!index/';
   app.disc='首页';
   //app.icon='_app.png';
   app.bg='#fff';
@@ -21,8 +21,8 @@ $(function(){
   regApp(app);
   //===========================================
   app={};
-  app.name='pinyin';
-  app.path='apps/pinyin/';
+  app.name='!pinyin';
+  app.path='apps/!pinyin/';
   app.disc='查拼音';
   //app.icon='_app.png';
   app.bg='#fd0';
@@ -34,8 +34,8 @@ $(function(){
   regApp(app);
   //===========================================
   app={};
-  app.name='pgtest';
-  app.path='apps/pgtest/';
+  app.name='!pgtest';
+  app.path='apps/!pgtest/';
   app.disc='测试pg功能';
   //app.icon='_app.png';
   app.bg='#0df';
@@ -48,8 +48,8 @@ $(function(){
   regApp(app);
   //===========================================
   app={};
-  app.name='gesture ';
-  app.path='apps/gesture/';
+  app.name='!gesture ';
+  app.path='apps/!gesture/';
   app.disc='手势';
   //app.icon='_app.png';
   app.bg='#d99';
@@ -60,8 +60,8 @@ $(function(){
   regApp(app);
   //===========================================
   app={};
-  app.name='goto';
-  app.path='apps/goto/';
+  app.name='!goto';
+  app.path='apps/!goto/';
   app.disc='跳转到..';
   //app.icon='_app.png';
   app.bg='#ddd';
@@ -76,7 +76,7 @@ $(function(){
   
   //MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
   laolin.router.appConfig.siteName='老林在线';
-  laolin.router.appConfig.appDefault= 'index';//默认app
+  laolin.router.appConfig.appDefault= '!index';//默认app
   console.log('router start.');
   laolin.router.start();
   
